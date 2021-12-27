@@ -18,5 +18,12 @@
         "psr-4": {
             "ConfettiCode\\Laravel\\Foundation\\": "src/Foundation/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ConfettiCode\\Laravel\\Foundation\\Providers\\FoundationServiceProvider"
+            ]
+        }
     }
 }
