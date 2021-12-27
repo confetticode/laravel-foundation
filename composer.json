@@ -1,0 +1,22 @@
+{
+    "name": "confetticode/laravel-foundation",
+    "description": "Override Laravel Foundation",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Quynh Xuan Nguyen",
+            "email": "seriquynh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravel/framework": "^8.77",
+        "symfony/dotenv": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConfettiCode\\Laravel\\Foundation\\": "src/Foundation/"
+        }
+    }
+}
