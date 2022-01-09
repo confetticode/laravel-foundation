@@ -2,6 +2,7 @@
 
 namespace ConfettiCode\Laravel\Foundation\Providers;
 
+use ConfettiCode\Laravel\Foundation\Console\Commands\MailTestCommand;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use Symfony\Component\Dotenv\Command\DebugCommand;
@@ -10,7 +11,11 @@ class FoundationServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->commands(DebugCommand::class);
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'foundation');
+        $this->commands([
+            DebugCommand::class,
+            MailTestCommand::class,
+        ]);
     }
 
     public function register()
