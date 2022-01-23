@@ -11,7 +11,7 @@ class FoundationServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'foundation');
+        $this->loadViewsFrom(__DIR__.'/../../../resources/views', 'foundation');
         $this->commands([
             DebugCommand::class,
             MailTestCommand::class,
@@ -21,6 +21,7 @@ class FoundationServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerDebugDotenvCommand();
+        $this->registerMailTestCommand();
     }
 
     protected function registerDebugDotenvCommand()
