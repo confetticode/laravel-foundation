@@ -29,4 +29,11 @@ class FoundationServiceProvider extends ServiceProvider
             return new DebugCommand($app->environment(), $app->basePath());
         });
     }
+
+    protected function registerMailTestCommand()
+    {
+        $this->app->singleton(MailTestCommand::class, function (Application $app) {
+            return new MailTestCommand();
+        });
+    }
 }
